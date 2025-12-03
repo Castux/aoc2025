@@ -17,7 +17,7 @@ local function isInvalidPart2(n)
 	for len = 1,#str/2 do
 		if #str % len == 0 then
 			local prefix = str:sub(1,len)
-			if str == string.rep(prefix, #str/len) then
+			if str == prefix:rep(#str/len) then
 				return true
 			end
 		end
